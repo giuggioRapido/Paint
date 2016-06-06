@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8357FD7B1D05FEFD00CB357D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8357FD7A1D05FEFD00CB357D /* AppDelegate.swift */; };
+		8357FD7D1D05FEFD00CB357D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8357FD7C1D05FEFD00CB357D /* ViewController.swift */; };
+		8357FD801D05FEFD00CB357D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8357FD7E1D05FEFD00CB357D /* Main.storyboard */; };
+		8357FD821D05FEFD00CB357D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8357FD811D05FEFD00CB357D /* Assets.xcassets */; };
+		8357FD851D05FEFD00CB357D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8357FD831D05FEFD00CB357D /* LaunchScreen.storyboard */; };
+		8357FD901D05FEFD00CB357D /* PaintTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8357FD8F1D05FEFD00CB357D /* PaintTests.swift */; };
+		8357FD9B1D05FEFD00CB357D /* PaintUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8357FD9A1D05FEFD00CB357D /* PaintUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8357FD8C1D05FEFD00CB357D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8357FD6F1D05FEFC00CB357D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8357FD761D05FEFC00CB357D;
+			remoteInfo = Paint;
+		};
+		8357FD971D05FEFD00CB357D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8357FD6F1D05FEFC00CB357D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8357FD761D05FEFC00CB357D;
+			remoteInfo = Paint;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8357FD771D05FEFD00CB357D /* Paint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Paint.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8357FD7A1D05FEFD00CB357D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8357FD7C1D05FEFD00CB357D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8357FD7F1D05FEFD00CB357D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8357FD811D05FEFD00CB357D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8357FD841D05FEFD00CB357D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8357FD861D05FEFD00CB357D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8357FD8B1D05FEFD00CB357D /* PaintTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaintTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8357FD8F1D05FEFD00CB357D /* PaintTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintTests.swift; sourceTree = "<group>"; };
+		8357FD911D05FEFD00CB357D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8357FD961D05FEFD00CB357D /* PaintUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaintUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8357FD9A1D05FEFD00CB357D /* PaintUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintUITests.swift; sourceTree = "<group>"; };
+		8357FD9C1D05FEFD00CB357D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8357FD741D05FEFC00CB357D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8357FD881D05FEFD00CB357D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8357FD931D05FEFD00CB357D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8357FD6E1D05FEFC00CB357D = {
+			isa = PBXGroup;
+			children = (
+				8357FD791D05FEFD00CB357D /* Paint */,
+				8357FD8E1D05FEFD00CB357D /* PaintTests */,
+				8357FD991D05FEFD00CB357D /* PaintUITests */,
+				8357FD781D05FEFD00CB357D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8357FD781D05FEFD00CB357D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8357FD771D05FEFD00CB357D /* Paint.app */,
+				8357FD8B1D05FEFD00CB357D /* PaintTests.xctest */,
+				8357FD961D05FEFD00CB357D /* PaintUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8357FD791D05FEFD00CB357D /* Paint */ = {
+			isa = PBXGroup;
+			children = (
+				8357FD7A1D05FEFD00CB357D /* AppDelegate.swift */,
+				8357FD7C1D05FEFD00CB357D /* ViewController.swift */,
+				8357FD7E1D05FEFD00CB357D /* Main.storyboard */,
+				8357FD811D05FEFD00CB357D /* Assets.xcassets */,
+				8357FD831D05FEFD00CB357D /* LaunchScreen.storyboard */,
+				8357FD861D05FEFD00CB357D /* Info.plist */,
+			);
+			path = Paint;
+			sourceTree = "<group>";
+		};
+		8357FD8E1D05FEFD00CB357D /* PaintTests */ = {
+			isa = PBXGroup;
+			children = (
+				8357FD8F1D05FEFD00CB357D /* PaintTests.swift */,
+				8357FD911D05FEFD00CB357D /* Info.plist */,
+			);
+			path = PaintTests;
+			sourceTree = "<group>";
+		};
+		8357FD991D05FEFD00CB357D /* PaintUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8357FD9A1D05FEFD00CB357D /* PaintUITests.swift */,
+				8357FD9C1D05FEFD00CB357D /* Info.plist */,
+			);
+			path = PaintUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8357FD761D05FEFC00CB357D /* Paint */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8357FD9F1D05FEFD00CB357D /* Build configuration list for PBXNativeTarget "Paint" */;
+			buildPhases = (
+				8357FD731D05FEFC00CB357D /* Sources */,
+				8357FD741D05FEFC00CB357D /* Frameworks */,
+				8357FD751D05FEFC00CB357D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Paint;
+			productName = Paint;
+			productReference = 8357FD771D05FEFD00CB357D /* Paint.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8357FD8A1D05FEFD00CB357D /* PaintTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8357FDA21D05FEFD00CB357D /* Build configuration list for PBXNativeTarget "PaintTests" */;
+			buildPhases = (
+				8357FD871D05FEFD00CB357D /* Sources */,
+				8357FD881D05FEFD00CB357D /* Frameworks */,
+				8357FD891D05FEFD00CB357D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8357FD8D1D05FEFD00CB357D /* PBXTargetDependency */,
+			);
+			name = PaintTests;
+			productName = PaintTests;
+			productReference = 8357FD8B1D05FEFD00CB357D /* PaintTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8357FD951D05FEFD00CB357D /* PaintUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8357FDA51D05FEFD00CB357D /* Build configuration list for PBXNativeTarget "PaintUITests" */;
+			buildPhases = (
+				8357FD921D05FEFD00CB357D /* Sources */,
+				8357FD931D05FEFD00CB357D /* Frameworks */,
+				8357FD941D05FEFD00CB357D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8357FD981D05FEFD00CB357D /* PBXTargetDependency */,
+			);
+			name = PaintUITests;
+			productName = PaintUITests;
+			productReference = 8357FD961D05FEFD00CB357D /* PaintUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8357FD6F1D05FEFC00CB357D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Christopher Shea";
+				TargetAttributes = {
+					8357FD761D05FEFC00CB357D = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					8357FD8A1D05FEFD00CB357D = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 8357FD761D05FEFC00CB357D;
+					};
+					8357FD951D05FEFD00CB357D = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 8357FD761D05FEFC00CB357D;
+					};
+				};
+			};
+			buildConfigurationList = 8357FD721D05FEFC00CB357D /* Build configuration list for PBXProject "Paint" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8357FD6E1D05FEFC00CB357D;
+			productRefGroup = 8357FD781D05FEFD00CB357D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8357FD761D05FEFC00CB357D /* Paint */,
+				8357FD8A1D05FEFD00CB357D /* PaintTests */,
+				8357FD951D05FEFD00CB357D /* PaintUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8357FD751D05FEFC00CB357D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8357FD851D05FEFD00CB357D /* LaunchScreen.storyboard in Resources */,
+				8357FD821D05FEFD00CB357D /* Assets.xcassets in Resources */,
+				8357FD801D05FEFD00CB357D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8357FD891D05FEFD00CB357D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8357FD941D05FEFD00CB357D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8357FD731D05FEFC00CB357D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8357FD7D1D05FEFD00CB357D /* ViewController.swift in Sources */,
+				8357FD7B1D05FEFD00CB357D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8357FD871D05FEFD00CB357D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8357FD901D05FEFD00CB357D /* PaintTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8357FD921D05FEFD00CB357D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8357FD9B1D05FEFD00CB357D /* PaintUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8357FD8D1D05FEFD00CB357D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8357FD761D05FEFC00CB357D /* Paint */;
+			targetProxy = 8357FD8C1D05FEFD00CB357D /* PBXContainerItemProxy */;
+		};
+		8357FD981D05FEFD00CB357D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8357FD761D05FEFC00CB357D /* Paint */;
+			targetProxy = 8357FD971D05FEFD00CB357D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8357FD7E1D05FEFD00CB357D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8357FD7F1D05FEFD00CB357D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8357FD831D05FEFD00CB357D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8357FD841D05FEFD00CB357D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8357FD9D1D05FEFD00CB357D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8357FD9E1D05FEFD00CB357D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8357FDA01D05FEFD00CB357D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Paint/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chrisshea.Paint;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8357FDA11D05FEFD00CB357D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Paint/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chrisshea.Paint;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		8357FDA31D05FEFD00CB357D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PaintTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chrisshea.PaintTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Paint.app/Paint";
+			};
+			name = Debug;
+		};
+		8357FDA41D05FEFD00CB357D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PaintTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chrisshea.PaintTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Paint.app/Paint";
+			};
+			name = Release;
+		};
+		8357FDA61D05FEFD00CB357D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PaintUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chrisshea.PaintUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Paint;
+			};
+			name = Debug;
+		};
+		8357FDA71D05FEFD00CB357D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PaintUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chrisshea.PaintUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Paint;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8357FD721D05FEFC00CB357D /* Build configuration list for PBXProject "Paint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8357FD9D1D05FEFD00CB357D /* Debug */,
+				8357FD9E1D05FEFD00CB357D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8357FD9F1D05FEFD00CB357D /* Build configuration list for PBXNativeTarget "Paint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8357FDA01D05FEFD00CB357D /* Debug */,
+				8357FDA11D05FEFD00CB357D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8357FDA21D05FEFD00CB357D /* Build configuration list for PBXNativeTarget "PaintTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8357FDA31D05FEFD00CB357D /* Debug */,
+				8357FDA41D05FEFD00CB357D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8357FDA51D05FEFD00CB357D /* Build configuration list for PBXNativeTarget "PaintUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8357FDA61D05FEFD00CB357D /* Debug */,
+				8357FDA71D05FEFD00CB357D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8357FD6F1D05FEFC00CB357D /* Project object */;
+}
