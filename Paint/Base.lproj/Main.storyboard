@@ -52,9 +52,9 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lDV-YP-nGA">
-                                                <rect key="frame" x="20" y="553" width="55" height="27"/>
+                                                <rect key="frame" x="20" y="553" width="55" height="39"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="27" id="BFv-yY-4C5"/>
+                                                    <constraint firstAttribute="height" constant="39" id="BFv-yY-4C5"/>
                                                     <constraint firstAttribute="width" constant="55" id="oiJ-qo-S8g"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -113,9 +113,9 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgt-9g-EMi" userLabel="Size Palette Toggle">
-                                                <rect key="frame" x="89" y="553" width="55" height="27"/>
+                                                <rect key="frame" x="89" y="553" width="55" height="39"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="27" id="VLC-qH-2Ir"/>
+                                                    <constraint firstAttribute="height" constant="39" id="VLC-qH-2Ir"/>
                                                     <constraint firstAttribute="width" constant="55" id="e2c-FT-sS7"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -127,10 +127,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pdp-E4-VVw">
-                                                <rect key="frame" x="525" y="553" width="55" height="27"/>
+                                                <rect key="frame" x="525" y="553" width="55" height="39"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="27" id="VKI-72-IZN"/>
+                                                    <constraint firstAttribute="height" constant="39" id="VKI-72-IZN"/>
                                                     <constraint firstAttribute="width" constant="55" id="bGe-X5-zEr"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -162,7 +162,7 @@
                                             <constraint firstItem="rx4-kC-J4M" firstAttribute="leading" secondItem="76h-Gy-ZPP" secondAttribute="leading" id="8yK-eT-CZS"/>
                                             <constraint firstAttribute="trailing" secondItem="Pdp-E4-VVw" secondAttribute="trailing" constant="20" symbolic="YES" id="B2Z-BA-68Q"/>
                                             <constraint firstItem="lDV-YP-nGA" firstAttribute="top" secondItem="76h-Gy-ZPP" secondAttribute="bottom" constant="18" id="CrC-7n-xWN"/>
-                                            <constraint firstAttribute="bottom" secondItem="Pdp-E4-VVw" secondAttribute="bottom" constant="20" id="FMJ-G6-KGh"/>
+                                            <constraint firstAttribute="bottom" secondItem="Pdp-E4-VVw" secondAttribute="bottom" constant="8" id="FMJ-G6-KGh"/>
                                             <constraint firstItem="fgt-9g-EMi" firstAttribute="height" secondItem="lDV-YP-nGA" secondAttribute="height" id="FYy-np-fh0"/>
                                             <constraint firstItem="gzp-wz-1Fq" firstAttribute="leading" secondItem="BCC-MG-7sh" secondAttribute="leading" id="Fgp-HC-fT5"/>
                                             <constraint firstItem="tYR-Az-vpV" firstAttribute="top" secondItem="BZQ-p4-iDD" secondAttribute="bottom" constant="8" symbolic="YES" id="GNk-t9-KNS"/>
