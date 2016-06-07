@@ -15,6 +15,37 @@ class CanvasViewController: UIViewController {
     @IBOutlet var brushSizePalette: [UIButton]!
     @IBOutlet weak var clearButton: UIButton!
     @IBOutlet weak var eraseButton: UIButton!
+    @IBOutlet weak var colorPaletteToggle: UIButton!
+    @IBOutlet weak var blackColorButton: UIButton!
+    @IBOutlet weak var mediumBrushButton: UIButton!
+    
+    var currentlySelectedColorButton: UIButton? {
+        didSet {
+            if let newButton = currentlySelectedColorButton {
+                newButton.layer.borderColor = UIColor.blueColor().CGColor
+                newButton.layer.borderWidth = 2.0
+                
+                if let oldButton = oldValue {
+                    oldButton.layer.borderColor = nil
+                    oldButton.layer.borderWidth = 0
+                }
+            }
+        }
+    }
+    
+    var currentlySelectedSizeButton: UIButton? {
+        didSet {
+            if let newButton = currentlySelectedSizeButton {
+                newButton.layer.borderColor = UIColor.blueColor().CGColor
+                newButton.layer.borderWidth = 2.0
+                
+                if let oldButton = oldValue {
+                    oldButton.layer.borderColor = nil
+                    oldButton.layer.borderWidth = 0
+                }
+            }
+        }
+    }
     
     var lastPoint = CGPoint.zero
     var swiped = false
@@ -31,6 +62,8 @@ class CanvasViewController: UIViewController {
         }
         
         clearButton.hidden = true
+        currentlySelectedColorButton = blackColorButton
+        currentlySelectedSizeButton = mediumBrushButton
     }
     
     
@@ -58,16 +91,21 @@ class CanvasViewController: UIViewController {
     
     @IBAction func setBrushColor(sender: UIButton) {
         let selectedColor = sender.backgroundColor!
+        
         if canvasView.isErasing {
             canvasView.pendingBrushColor = selectedColor
         } else {
             canvasView.brushColor = selectedColor
         }
+        
+        colorPaletteToggle.setTitleColor(selectedColor, forState: .Normal)
+        currentlySelectedColorButton = sender
     }
     
     @IBAction func setBrushSize(sender: UIButton) {
         let size = (sender.titleLabel?.font.pointSize)!
         canvasView.brushSize = size
+        currentlySelectedSizeButton = sender
     }
     
     @IBAction func clearCanvas(sender: AnyObject) {
