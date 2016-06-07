@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		8357FD7B1D05FEFD00CB357D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8357FD7A1D05FEFD00CB357D /* AppDelegate.swift */; };
-		8357FD7D1D05FEFD00CB357D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8357FD7C1D05FEFD00CB357D /* ViewController.swift */; };
+		8357FD7D1D05FEFD00CB357D /* CanvasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8357FD7C1D05FEFD00CB357D /* CanvasViewController.swift */; };
 		8357FD801D05FEFD00CB357D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8357FD7E1D05FEFD00CB357D /* Main.storyboard */; };
 		8357FD821D05FEFD00CB357D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8357FD811D05FEFD00CB357D /* Assets.xcassets */; };
 		8357FD851D05FEFD00CB357D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8357FD831D05FEFD00CB357D /* LaunchScreen.storyboard */; };
 		8357FD901D05FEFD00CB357D /* PaintTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8357FD8F1D05FEFD00CB357D /* PaintTests.swift */; };
 		8357FD9B1D05FEFD00CB357D /* PaintUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8357FD9A1D05FEFD00CB357D /* PaintUITests.swift */; };
+		8357FDAD1D061C2F00CB357D /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8357FDAC1D061C2F00CB357D /* CanvasView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,7 @@
 /* Begin PBXFileReference section */
 		8357FD771D05FEFD00CB357D /* Paint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Paint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8357FD7A1D05FEFD00CB357D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8357FD7C1D05FEFD00CB357D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8357FD7C1D05FEFD00CB357D /* CanvasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasViewController.swift; sourceTree = "<group>"; };
 		8357FD7F1D05FEFD00CB357D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8357FD811D05FEFD00CB357D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8357FD841D05FEFD00CB357D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +48,7 @@
 		8357FD961D05FEFD00CB357D /* PaintUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaintUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8357FD9A1D05FEFD00CB357D /* PaintUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintUITests.swift; sourceTree = "<group>"; };
 		8357FD9C1D05FEFD00CB357D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8357FDAC1D061C2F00CB357D /* CanvasView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CanvasView.swift; path = ../CanvasView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				8357FD7A1D05FEFD00CB357D /* AppDelegate.swift */,
-				8357FD7C1D05FEFD00CB357D /* ViewController.swift */,
+				8357FD7C1D05FEFD00CB357D /* CanvasViewController.swift */,
+				8357FDAC1D061C2F00CB357D /* CanvasView.swift */,
 				8357FD7E1D05FEFD00CB357D /* Main.storyboard */,
 				8357FD811D05FEFD00CB357D /* Assets.xcassets */,
 				8357FD831D05FEFD00CB357D /* LaunchScreen.storyboard */,
@@ -193,6 +196,7 @@
 				TargetAttributes = {
 					8357FD761D05FEFC00CB357D = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = THP5EV5EJ9;
 					};
 					8357FD8A1D05FEFD00CB357D = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -256,8 +260,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8357FD7D1D05FEFD00CB357D /* ViewController.swift in Sources */,
+				8357FD7D1D05FEFD00CB357D /* CanvasViewController.swift in Sources */,
 				8357FD7B1D05FEFD00CB357D /* AppDelegate.swift in Sources */,
+				8357FDAD1D061C2F00CB357D /* CanvasView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,7 +406,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Paint/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.chrisshea.Paint;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -412,7 +419,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Paint/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.chrisshea.Paint;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -484,6 +493,7 @@
 				8357FDA11D05FEFD00CB357D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8357FDA21D05FEFD00CB357D /* Build configuration list for PBXNativeTarget "PaintTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +502,7 @@
 				8357FDA41D05FEFD00CB357D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8357FDA51D05FEFD00CB357D /* Build configuration list for PBXNativeTarget "PaintUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +511,7 @@
 				8357FDA71D05FEFD00CB357D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
