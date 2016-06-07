@@ -15,7 +15,21 @@ class CanvasViewController: UIViewController {
     var lastPoint = CGPoint.zero
     var swiped = false
     
-        
+    
+    @IBOutlet var colorPalette: [UIButton]!
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    
+    @IBAction func toggleColorPalette(sender: AnyObject) {
+        let isHidden = colorPalette.first?.hidden
+        for color in colorPalette {
+            color.hidden = !isHidden!
+        }
+    }
+    
 
     //MARK: Touch Events
     
@@ -26,6 +40,7 @@ class CanvasViewController: UIViewController {
             lastPoint = touch.locationInView(canvasView)
         }
     }
+
     
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
         swiped = true

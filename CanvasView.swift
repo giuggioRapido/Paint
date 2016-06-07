@@ -29,7 +29,7 @@ class CanvasView: UIImageView {
         CGContextAddLineToPoint(context, toPoint.x, toPoint.y)
         
         CGContextSetLineCap(context, .Round)
-        CGContextSetLineWidth(context, 5.0)
+        CGContextSetLineWidth(context, 50.0)
         CGContextSetRGBStrokeColor(context, 0, 0, 0, 1.0)
         CGContextSetBlendMode(context, .Normal)
         
