@@ -13,6 +13,8 @@ class CanvasViewController: UIViewController {
     @IBOutlet weak var canvasView: CanvasView!
     @IBOutlet var colorPalette: [UIButton]!
     @IBOutlet var brushSizePalette: [UIButton]!
+    @IBOutlet weak var clearButton: UIButton!
+    @IBOutlet weak var eraseButton: UIButton!
     
     var lastPoint = CGPoint.zero
     var swiped = false
@@ -27,6 +29,8 @@ class CanvasViewController: UIViewController {
         for brush in brushSizePalette {
             brush.hidden = true
         }
+        
+        clearButton.hidden = true
     }
     
     
@@ -49,6 +53,7 @@ class CanvasViewController: UIViewController {
         let isSelected = sender.selected
         sender.selected = !isSelected
         canvasView.isErasing = sender.selected
+        clearButton.hidden = !sender.selected
     }
     
     @IBAction func setBrushColor(sender: UIButton) {
@@ -63,6 +68,11 @@ class CanvasViewController: UIViewController {
     @IBAction func setBrushSize(sender: UIButton) {
         let size = (sender.titleLabel?.font.pointSize)!
         canvasView.brushSize = size
+    }
+    
+    @IBAction func clearCanvas(sender: AnyObject) {
+        canvasView.clear()
+        toggleEraser(eraseButton)
     }
     
     

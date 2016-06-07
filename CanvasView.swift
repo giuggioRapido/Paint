@@ -62,4 +62,15 @@ class CanvasView: UIImageView {
         UIGraphicsEndImageContext()
     }
     
+    func clear() {
+//        UIGraphicsBeginImageContext(self.bounds.size)
+//
+//        let context = UIGraphicsGetCurrentContext()
+//        CGContextClearRect(context, CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height))
+//        UIGraphicsEndImageContext()
+        
+        self.image = nil
+
+    }
+    
 }
