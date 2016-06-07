@@ -11,28 +11,37 @@ import UIKit
 class CanvasViewController: UIViewController {
     
     @IBOutlet weak var canvasView: CanvasView!
+    @IBOutlet var colorPalette: [UIButton]!
     
     var lastPoint = CGPoint.zero
     var swiped = false
     
-    
-    @IBOutlet var colorPalette: [UIButton]!
-    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        
+        for color in colorPalette {
+            color.hidden = true
+        }
     }
     
     
-    @IBAction func toggleColorPalette(sender: AnyObject) {
+    
+    
+    //MARK: IBActions
+    @IBAction func toggleColorPalette(sender: UIButton) {
         let isHidden = colorPalette.first?.hidden
+        
         for color in colorPalette {
             color.hidden = !isHidden!
         }
     }
     
+    @IBAction func setBrushColor(sender: UIButton) {
+        canvasView.brushColor = sender.backgroundColor!
+    }
 
-    //MARK: Touch Events
     
+    //MARK: Touch Events
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         swiped = false
         

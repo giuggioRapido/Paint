@@ -26,18 +26,23 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tYR-Az-vpV" userLabel="Red">
                                                 <rect key="frame" x="32" y="429" width="30" height="30"/>
                                                 <color key="backgroundColor" red="0.91967304755671897" green="0.11069312795415936" blue="0.13622408430193686" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="setBrushColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WJv-Ws-lIQ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="76h-Gy-ZPP" userLabel="Black">
                                                 <rect key="frame" x="32" y="505" width="30" height="30"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <connections>
+                                                    <action selector="setBrushColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pKX-bA-Yug"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rx4-kC-J4M" userLabel="Blue">
                                                 <rect key="frame" x="32" y="467" width="30" height="30"/>
                                                 <color key="backgroundColor" red="0.15557176302690623" green="0.2445650770631283" blue="0.91967304755671897" alpha="1" colorSpace="calibratedRGB"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZQ-p4-iDD" userLabel="Green">
-                                                <rect key="frame" x="32" y="391" width="30" height="30"/>
-                                                <color key="backgroundColor" red="0.0008510567907808568" green="0.91967304755671897" blue="0.062597851926606135" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="setBrushColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Ms-0f-IG3"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lDV-YP-nGA">
                                                 <rect key="frame" x="20" y="543" width="55" height="37"/>
@@ -51,6 +56,13 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="toggleColorPalette:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PaY-DF-Jen"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZQ-p4-iDD" userLabel="Green">
+                                                <rect key="frame" x="32" y="391" width="30" height="30"/>
+                                                <color key="backgroundColor" red="0.057041916172189219" green="0.85755481020942415" blue="0.071251090059834335" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="setBrushColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BXx-mh-obX"/>
                                                 </connections>
                                             </button>
                                         </subviews>

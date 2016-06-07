@@ -18,19 +18,20 @@ class CanvasView: UIImageView {
     }
     */
     
+    var brushColor = UIColor.blackColor()
+    
     func drawLineFrom(fromPoint: CGPoint, toPoint: CGPoint) {
         
         UIGraphicsBeginImageContext(self.bounds.size)
         let context = UIGraphicsGetCurrentContext()
         self.image?.drawInRect(CGRect(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.size.height))
         
-        
         CGContextMoveToPoint(context, fromPoint.x, fromPoint.y)
         CGContextAddLineToPoint(context, toPoint.x, toPoint.y)
         
         CGContextSetLineCap(context, .Round)
-        CGContextSetLineWidth(context, 50.0)
-        CGContextSetRGBStrokeColor(context, 0, 0, 0, 1.0)
+        CGContextSetLineWidth(context, 5.0)
+        CGContextSetStrokeColorWithColor(context, brushColor.CGColor)
         CGContextSetBlendMode(context, .Normal)
         
         CGContextStrokePath(context)
@@ -38,7 +39,7 @@ class CanvasView: UIImageView {
         self.image = UIGraphicsGetImageFromCurrentImageContext()
         self.alpha = 1.0
         
-        UIGraphicsEndImageContext()
+       UIGraphicsEndImageContext()
         
     }
 
