@@ -10,17 +10,14 @@ import UIKit
 
 class CanvasView: UIImageView {
     
-    /*
-     // Only override drawRect: if you perform custom drawing.
-     // An empty implementation adversely affects performance during animation.
-     override func drawRect(rect: CGRect) {
-     // Drawing code
-     }
-     */
-    
     var brushColor = UIColor.blackColor() { didSet { previousBrushColor = oldValue } }
     var previousBrushColor = UIColor.blackColor()
     var pendingBrushColor: UIColor?
+    var swiped = false
+    var lastPoint = CGPoint.zero
+    var brushSize: CGFloat = 20.0
+    
+
     var isErasing = false {
         willSet {
             switch newValue {
@@ -37,8 +34,35 @@ class CanvasView: UIImageView {
         }
     }
     
-    var brushSize: CGFloat = 20.0
     
+    //MARK: Touch Events
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        swiped = false
+        if let touch = touches.first {
+            lastPoint = touch.locationInView(self)
+        }
+    }
+    
+    
+    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        swiped = true
+        
+        if let touch = touches.first {
+            let currentPoint = touch.locationInView(self)
+            drawLineFrom(lastPoint, toPoint: currentPoint)
+            lastPoint = currentPoint
+        }
+    }
+    
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        if !swiped {
+            drawLineFrom(lastPoint, toPoint: lastPoint)
+        }
+        
+    }
+    
+    
+    //MARK: Drawing
     func drawLineFrom(fromPoint: CGPoint, toPoint: CGPoint) {
         
         UIGraphicsBeginImageContext(self.bounds.size)
@@ -63,14 +87,7 @@ class CanvasView: UIImageView {
     }
     
     func clear() {
-//        UIGraphicsBeginImageContext(self.bounds.size)
-//
-//        let context = UIGraphicsGetCurrentContext()
-//        CGContextClearRect(context, CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height))
-//        UIGraphicsEndImageContext()
-        
         self.image = nil
-
     }
-    
+
 }
