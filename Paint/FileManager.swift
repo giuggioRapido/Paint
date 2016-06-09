@@ -19,11 +19,7 @@ struct FileManager {
         if let imagePath = imageURL?.path {
             let manager = NSFileManager.defaultManager()
             let success = manager.createFileAtPath(imagePath, contents: imageData, attributes: nil)
-            if success {
-                print("image saved successfully to \(imagePath)")
-            } else {
-                print("image save failed")
-            }
+            if !success { print("image save failed") }
         }
     }
     
@@ -37,6 +33,7 @@ struct FileManager {
             print("could not create image path")
             return nil
         }
+        
         let manager = NSFileManager.defaultManager()
         let imageData = manager.contentsAtPath(imagePath)
         
@@ -52,6 +49,7 @@ struct FileManager {
             print("Could not get document directory URL")
             return nil
         }
+        
         return documentURL
     }
 }

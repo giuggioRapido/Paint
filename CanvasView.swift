@@ -55,6 +55,7 @@ class CanvasView: UIImageView {
             let currentPoint = touch.locationInView(self)
             drawLineFrom(lastPoint, toPoint: currentPoint)
             lastPoint = currentPoint
+            
         }
     }
     

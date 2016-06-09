@@ -129,6 +129,13 @@ class CanvasViewController: UIViewController {
         }
     }
     
+    @IBAction func sendToPhotos(sender: UIButton) {
+        if let img = savedImage {
+            UIImageWriteToSavedPhotosAlbum(img, nil, nil, nil)
+        }
+    }
+    
+    //MARK: Persistence
     func imageFromDocuments() -> UIImage? {
         if let imageData = FileManager.loadImageFromDocuments() {
             if let image = UIImage(data: imageData) {
@@ -142,6 +149,8 @@ class CanvasViewController: UIViewController {
     }
 }
 
+
+//MARK: CanvasViewDelegate
 extension CanvasViewController: CanvasViewDelegate {
     func canvasViewDidCompleteBrushStroke(view: CanvasView) {
         savedImage = nil

@@ -164,6 +164,17 @@
                                                     <action selector="restoreImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ohn-Of-3Xh"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5o7-5D-IHe">
+                                                <rect key="frame" x="387" y="553" width="50" height="39"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="OfI-Sh-9Ha"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="Save"/>
+                                                <connections>
+                                                    <action selector="sendToPhotos:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xRm-jf-c1f"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -187,6 +198,7 @@
                                             <constraint firstItem="fgt-9g-EMi" firstAttribute="width" secondItem="lDV-YP-nGA" secondAttribute="width" id="KYa-Bx-8ug"/>
                                             <constraint firstItem="rx4-kC-J4M" firstAttribute="top" secondItem="tYR-Az-vpV" secondAttribute="bottom" constant="8" symbolic="YES" id="Kl1-Xg-S7Z"/>
                                             <constraint firstAttribute="bottom" secondItem="76h-Gy-ZPP" secondAttribute="bottom" constant="65" id="LFw-0k-Hlv"/>
+                                            <constraint firstItem="5o7-5D-IHe" firstAttribute="firstBaseline" secondItem="1iQ-66-wNt" secondAttribute="baseline" id="NfX-BG-sZi"/>
                                             <constraint firstItem="fgt-9g-EMi" firstAttribute="baseline" secondItem="lDV-YP-nGA" secondAttribute="baseline" id="ROr-zU-peg"/>
                                             <constraint firstItem="BZQ-p4-iDD" firstAttribute="leading" secondItem="M0y-yz-lLn" secondAttribute="leading" constant="32" id="TXg-mx-qum"/>
                                             <constraint firstItem="eEW-Tn-Ak2" firstAttribute="top" secondItem="76h-Gy-ZPP" secondAttribute="top" id="UFa-Jk-olh"/>
@@ -199,8 +211,11 @@
                                             <constraint firstItem="Pdp-E4-VVw" firstAttribute="leading" secondItem="1iQ-66-wNt" secondAttribute="trailing" constant="20" id="pW8-zk-0Ed"/>
                                             <constraint firstItem="Pdp-E4-VVw" firstAttribute="leading" secondItem="1iQ-66-wNt" secondAttribute="trailing" constant="19" id="pZ3-4w-wqG"/>
                                             <constraint firstItem="BCC-MG-7sh" firstAttribute="leading" secondItem="YeF-2m-tVJ" secondAttribute="leading" id="tdg-cF-Iae"/>
+                                            <constraint firstItem="1iQ-66-wNt" firstAttribute="leading" secondItem="5o7-5D-IHe" secondAttribute="trailing" constant="16" id="uOi-i2-XYA"/>
                                             <constraint firstItem="fgt-9g-EMi" firstAttribute="leading" secondItem="lDV-YP-nGA" secondAttribute="trailing" constant="14" id="vYT-AP-1af"/>
+                                            <constraint firstItem="5o7-5D-IHe" firstAttribute="baseline" secondItem="1iQ-66-wNt" secondAttribute="baseline" id="whB-Bd-h8x"/>
                                             <constraint firstItem="tYR-Az-vpV" firstAttribute="leading" secondItem="rx4-kC-J4M" secondAttribute="leading" id="xfB-nL-8Z0"/>
+                                            <constraint firstItem="5o7-5D-IHe" firstAttribute="top" secondItem="1iQ-66-wNt" secondAttribute="top" id="yAQ-CN-unv"/>
                                             <constraint firstItem="eEW-Tn-Ak2" firstAttribute="top" secondItem="YeF-2m-tVJ" secondAttribute="bottom" constant="8" symbolic="YES" id="zD2-60-cGc"/>
                                             <constraint firstItem="YeF-2m-tVJ" firstAttribute="top" secondItem="BCC-MG-7sh" secondAttribute="bottom" constant="8" symbolic="YES" id="zbt-aC-di1"/>
                                         </constraints>
