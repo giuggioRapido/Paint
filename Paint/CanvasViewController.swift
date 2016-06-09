@@ -131,8 +131,23 @@ class CanvasViewController: UIViewController {
     
     @IBAction func sendToPhotos(sender: UIButton) {
         if let img = savedImage {
-            UIImageWriteToSavedPhotosAlbum(img, nil, nil, nil)
+            UIImageWriteToSavedPhotosAlbum(img, self, #selector(CanvasViewController.image(_:didFinishSavingWithError:contextInfo:)), nil)
         }
+    }
+    
+    func image(image: UIImage, didFinishSavingWithError error: NSError?, contextInfo:UnsafePointer<Void>) {
+        guard error == nil else {
+            print(error)
+            return
+        }
+        displayImageSavedAlert()
+    }
+    
+    func displayImageSavedAlert() {
+        let alert = UIAlertController(title: "Image saved to Photos", message: nil, preferredStyle: .Alert)
+        let okAction = UIAlertAction.init(title: "OK", style: .Cancel, handler: nil)
+        alert.addAction(okAction)
+        presentViewController(alert, animated: true, completion: nil)
     }
     
     //MARK: Persistence
