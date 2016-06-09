@@ -16,6 +16,7 @@
 		8357FD901D05FEFD00CB357D /* PaintTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8357FD8F1D05FEFD00CB357D /* PaintTests.swift */; };
 		8357FD9B1D05FEFD00CB357D /* PaintUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8357FD9A1D05FEFD00CB357D /* PaintUITests.swift */; };
 		8357FDAD1D061C2F00CB357D /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8357FDAC1D061C2F00CB357D /* CanvasView.swift */; };
+		83D5F3E71D0A123500C6950D /* Brush.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D5F3E61D0A123500C6950D /* Brush.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		8357FD9A1D05FEFD00CB357D /* PaintUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintUITests.swift; sourceTree = "<group>"; };
 		8357FD9C1D05FEFD00CB357D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8357FDAC1D061C2F00CB357D /* CanvasView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CanvasView.swift; path = ../CanvasView.swift; sourceTree = "<group>"; };
+		83D5F3E61D0A123500C6950D /* Brush.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Brush.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				83546EA71D09ACC10026F26B /* FileManager.swift */,
 				8357FD7C1D05FEFD00CB357D /* CanvasViewController.swift */,
 				8357FDAC1D061C2F00CB357D /* CanvasView.swift */,
+				83D5F3E61D0A123500C6950D /* Brush.swift */,
 				8357FD7E1D05FEFD00CB357D /* Main.storyboard */,
 				8357FD811D05FEFD00CB357D /* Assets.xcassets */,
 				8357FD831D05FEFD00CB357D /* LaunchScreen.storyboard */,
@@ -265,6 +268,7 @@
 			files = (
 				8357FD7D1D05FEFD00CB357D /* CanvasViewController.swift in Sources */,
 				8357FD7B1D05FEFD00CB357D /* AppDelegate.swift in Sources */,
+				83D5F3E71D0A123500C6950D /* Brush.swift in Sources */,
 				8357FDAD1D061C2F00CB357D /* CanvasView.swift in Sources */,
 				83546EA81D09ACC10026F26B /* FileManager.swift in Sources */,
 			);

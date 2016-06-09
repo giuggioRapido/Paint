@@ -13,10 +13,7 @@ protocol CanvasViewDelegate {
 }
 
 class CanvasView: UIImageView {
-    
-    var brushSize: CGFloat = 20.0
-    var brushColor = UIColor.blackColor() { didSet { previousBrushColor = oldValue } }
-    var previousBrushColor = UIColor.blackColor()
+    var brush = Brush()
     var pendingBrushColor: UIColor?
     var swiped = false
     var lastPoint = CGPoint.zero
@@ -24,16 +21,15 @@ class CanvasView: UIImageView {
 
     var isErasing = false {
         willSet {
-           
             switch newValue {
             case true:
-                brushColor = backgroundColor!
+                brush.color = backgroundColor!
             case false:
                 if let pendingColor = pendingBrushColor {
-                    brushColor = pendingColor
+                    brush.color = pendingColor
                     pendingBrushColor = nil
                 } else {
-                    brushColor = previousBrushColor
+                    brush.color = brush.previousColor
                 }
             }
         }
@@ -82,8 +78,8 @@ class CanvasView: UIImageView {
         CGContextAddLineToPoint(context, toPoint.x, toPoint.y)
         
         CGContextSetLineCap(context, .Round)
-        CGContextSetLineWidth(context, brushSize)
-        CGContextSetStrokeColorWithColor(context, brushColor.CGColor)
+        CGContextSetLineWidth(context, brush.size)
+        CGContextSetStrokeColorWithColor(context, brush.color.CGColor)
         CGContextSetBlendMode(context, .Normal)
         
         CGContextStrokePath(context)

@@ -104,7 +104,7 @@ class CanvasViewController: UIViewController {
         if canvasView.isErasing {
             canvasView.pendingBrushColor = selectedColor
         } else {
-            canvasView.brushColor = selectedColor
+            canvasView.brush.color = selectedColor
         }
         
         colorPaletteToggle.setTitleColor(selectedColor, forState: .Normal)
@@ -113,7 +113,7 @@ class CanvasViewController: UIViewController {
     
     @IBAction func setBrushSize(sender: UIButton) {
         let size = (sender.titleLabel?.font.pointSize)!
-        canvasView.brushSize = size
+        canvasView.brush.size = size
         currentlySelectedSizeButton = sender
     }
     
