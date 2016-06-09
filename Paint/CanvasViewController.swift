@@ -10,7 +10,11 @@ import UIKit
 
 class CanvasViewController: UIViewController {
     
-    @IBOutlet weak var canvasView: CanvasView!
+    @IBOutlet weak var canvasView: CanvasView! {
+        didSet {
+            canvasView.delegate = self
+        }
+    }
     @IBOutlet var colorPalette: [UIButton]!
     @IBOutlet var brushSizePalette: [UIButton]!
     @IBOutlet weak var clearButton: UIButton!
@@ -18,6 +22,8 @@ class CanvasViewController: UIViewController {
     @IBOutlet weak var colorPaletteToggle: UIButton!
     @IBOutlet weak var blackColorButton: UIButton!
     @IBOutlet weak var mediumBrushButton: UIButton!
+    
+    var savedImage: UIImage?
     
     var currentlySelectedColorButton: UIButton? {
         didSet {
@@ -46,12 +52,15 @@ class CanvasViewController: UIViewController {
             }
         }
     }
-        
-  
-    //MARK: Life Cycle
     
+    
+    //MARK: Life Cycle
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        
+        if let savedImage = imageFromDocuments() {
+            canvasView.image = savedImage
+        }
         
         for color in colorPalette {
             color.hidden = true
@@ -113,7 +122,36 @@ class CanvasViewController: UIViewController {
         toggleEraser(eraseButton)
     }
     
+    @IBAction func restoreImage(sender: UIButton) {
+        canvasView.clear()
+        if let image = savedImage {
+            canvasView.image = image
+        }
+    }
     
-    
+    func imageFromDocuments() -> UIImage? {
+        if let imageData = FileManager.loadImageFromDocuments() {
+            if let image = UIImage(data: imageData) {
+                return image
+            } else {
+                return nil
+            }
+        } else {
+            return nil
+        }
+    }
+}
+
+extension CanvasViewController: CanvasViewDelegate {
+    func canvasViewDidCompleteBrushStroke(view: CanvasView) {
+        savedImage = nil
+        savedImage = canvasView.image
+        guard let PNGImage = UIImagePNGRepresentation(savedImage!) else {
+            print("Could not convert image to PNG")
+            return
+        }
+        
+        FileManager.saveImageToDocuments(PNGImage)
+    }
 }
 

@@ -8,21 +8,26 @@
 
 import UIKit
 
+protocol CanvasViewDelegate {
+    func canvasViewDidCompleteBrushStroke(view: CanvasView)
+}
+
 class CanvasView: UIImageView {
     
+    var brushSize: CGFloat = 20.0
     var brushColor = UIColor.blackColor() { didSet { previousBrushColor = oldValue } }
     var previousBrushColor = UIColor.blackColor()
     var pendingBrushColor: UIColor?
     var swiped = false
     var lastPoint = CGPoint.zero
-    var brushSize: CGFloat = 20.0
-    
+    var delegate: CanvasViewDelegate?
 
     var isErasing = false {
         willSet {
+           
             switch newValue {
             case true:
-                brushColor = self.backgroundColor!
+                brushColor = backgroundColor!
             case false:
                 if let pendingColor = pendingBrushColor {
                     brushColor = pendingColor
@@ -43,7 +48,6 @@ class CanvasView: UIImageView {
         }
     }
     
-    
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
         swiped = true
         
@@ -59,8 +63,11 @@ class CanvasView: UIImageView {
             drawLineFrom(lastPoint, toPoint: lastPoint)
         }
         
+        delegate?.canvasViewDidCompleteBrushStroke(self)
     }
     
+    override func touchesCancelled(touches: Set<UITouch>?, withEvent event: UIEvent?) {
+    }
     
     //MARK: Drawing
     func drawLineFrom(fromPoint: CGPoint, toPoint: CGPoint) {
@@ -89,5 +96,4 @@ class CanvasView: UIImageView {
     func clear() {
         self.image = nil
     }
-
 }

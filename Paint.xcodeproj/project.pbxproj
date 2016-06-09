@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		83546EA81D09ACC10026F26B /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83546EA71D09ACC10026F26B /* FileManager.swift */; };
 		8357FD7B1D05FEFD00CB357D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8357FD7A1D05FEFD00CB357D /* AppDelegate.swift */; };
 		8357FD7D1D05FEFD00CB357D /* CanvasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8357FD7C1D05FEFD00CB357D /* CanvasViewController.swift */; };
 		8357FD801D05FEFD00CB357D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8357FD7E1D05FEFD00CB357D /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		83546EA71D09ACC10026F26B /* FileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		8357FD771D05FEFD00CB357D /* Paint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Paint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8357FD7A1D05FEFD00CB357D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8357FD7C1D05FEFD00CB357D /* CanvasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasViewController.swift; sourceTree = "<group>"; };
@@ -99,12 +101,13 @@
 		8357FD791D05FEFD00CB357D /* Paint */ = {
 			isa = PBXGroup;
 			children = (
-				8357FD7A1D05FEFD00CB357D /* AppDelegate.swift */,
+				83546EA71D09ACC10026F26B /* FileManager.swift */,
 				8357FD7C1D05FEFD00CB357D /* CanvasViewController.swift */,
 				8357FDAC1D061C2F00CB357D /* CanvasView.swift */,
 				8357FD7E1D05FEFD00CB357D /* Main.storyboard */,
 				8357FD811D05FEFD00CB357D /* Assets.xcassets */,
 				8357FD831D05FEFD00CB357D /* LaunchScreen.storyboard */,
+				8357FD7A1D05FEFD00CB357D /* AppDelegate.swift */,
 				8357FD861D05FEFD00CB357D /* Info.plist */,
 			);
 			path = Paint;
@@ -263,6 +266,7 @@
 				8357FD7D1D05FEFD00CB357D /* CanvasViewController.swift in Sources */,
 				8357FD7B1D05FEFD00CB357D /* AppDelegate.swift in Sources */,
 				8357FDAD1D061C2F00CB357D /* CanvasView.swift in Sources */,
+				83546EA81D09ACC10026F26B /* FileManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

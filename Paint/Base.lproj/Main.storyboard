@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Canvas View Controller-->
@@ -151,9 +153,21 @@
                                                     <action selector="clearCanvas:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CFK-sZ-bWt"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1iQ-66-wNt">
+                                                <rect key="frame" x="453" y="553" width="52" height="39"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="52" id="Ngh-mq-zRj"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="Undo"/>
+                                                <connections>
+                                                    <action selector="restoreImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ohn-Of-3Xh"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstItem="1iQ-66-wNt" firstAttribute="firstBaseline" secondItem="Pdp-E4-VVw" secondAttribute="baseline" id="0Pm-g8-SLj"/>
                                             <constraint firstItem="eEW-Tn-Ak2" firstAttribute="centerX" secondItem="fgt-9g-EMi" secondAttribute="centerX" id="159-6N-8ti"/>
                                             <constraint firstItem="BCC-MG-7sh" firstAttribute="top" secondItem="gzp-wz-1Fq" secondAttribute="bottom" constant="8" symbolic="YES" id="2KF-m5-LTu"/>
                                             <constraint firstItem="BZQ-p4-iDD" firstAttribute="leading" secondItem="tYR-Az-vpV" secondAttribute="leading" id="2qE-NY-BKh"/>
@@ -166,6 +180,7 @@
                                             <constraint firstItem="fgt-9g-EMi" firstAttribute="height" secondItem="lDV-YP-nGA" secondAttribute="height" id="FYy-np-fh0"/>
                                             <constraint firstItem="gzp-wz-1Fq" firstAttribute="leading" secondItem="BCC-MG-7sh" secondAttribute="leading" id="Fgp-HC-fT5"/>
                                             <constraint firstItem="tYR-Az-vpV" firstAttribute="top" secondItem="BZQ-p4-iDD" secondAttribute="bottom" constant="8" symbolic="YES" id="GNk-t9-KNS"/>
+                                            <constraint firstItem="1iQ-66-wNt" firstAttribute="top" secondItem="Pdp-E4-VVw" secondAttribute="top" id="I0o-qF-1Rw"/>
                                             <constraint firstItem="NMK-4T-Fwu" firstAttribute="centerX" secondItem="Pdp-E4-VVw" secondAttribute="centerX" id="IEP-x3-xQ1"/>
                                             <constraint firstItem="76h-Gy-ZPP" firstAttribute="centerX" secondItem="lDV-YP-nGA" secondAttribute="centerX" id="Izv-jC-iS1"/>
                                             <constraint firstItem="gzp-wz-1Fq" firstAttribute="top" secondItem="BZQ-p4-iDD" secondAttribute="top" id="KD7-xz-rhg"/>
@@ -180,6 +195,9 @@
                                             <constraint firstItem="76h-Gy-ZPP" firstAttribute="top" secondItem="rx4-kC-J4M" secondAttribute="bottom" constant="8" symbolic="YES" id="c4M-gU-q7x"/>
                                             <constraint firstItem="YeF-2m-tVJ" firstAttribute="leading" secondItem="eEW-Tn-Ak2" secondAttribute="leading" id="diO-m9-CMZ"/>
                                             <constraint firstItem="YeF-2m-tVJ" firstAttribute="top" secondItem="rx4-kC-J4M" secondAttribute="top" id="iMc-Gx-SRE"/>
+                                            <constraint firstItem="1iQ-66-wNt" firstAttribute="baseline" secondItem="Pdp-E4-VVw" secondAttribute="firstBaseline" id="izz-B2-aFc"/>
+                                            <constraint firstItem="Pdp-E4-VVw" firstAttribute="leading" secondItem="1iQ-66-wNt" secondAttribute="trailing" constant="20" id="pW8-zk-0Ed"/>
+                                            <constraint firstItem="Pdp-E4-VVw" firstAttribute="leading" secondItem="1iQ-66-wNt" secondAttribute="trailing" constant="19" id="pZ3-4w-wqG"/>
                                             <constraint firstItem="BCC-MG-7sh" firstAttribute="leading" secondItem="YeF-2m-tVJ" secondAttribute="leading" id="tdg-cF-Iae"/>
                                             <constraint firstItem="fgt-9g-EMi" firstAttribute="leading" secondItem="lDV-YP-nGA" secondAttribute="trailing" constant="14" id="vYT-AP-1af"/>
                                             <constraint firstItem="tYR-Az-vpV" firstAttribute="leading" secondItem="rx4-kC-J4M" secondAttribute="leading" id="xfB-nL-8Z0"/>
@@ -190,6 +208,7 @@
                                             <mask key="constraints">
                                                 <exclude reference="IEP-x3-xQ1"/>
                                                 <exclude reference="XiZ-0V-Ihe"/>
+                                                <exclude reference="pZ3-4w-wqG"/>
                                             </mask>
                                         </variation>
                                     </view>
