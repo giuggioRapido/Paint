@@ -9,7 +9,7 @@
 import UIKit
 
 class CanvasViewController: UIViewController {
-    
+
     @IBOutlet weak var canvasView: CanvasView! {
         didSet {
             canvasView.delegate = self
@@ -22,15 +22,15 @@ class CanvasViewController: UIViewController {
     @IBOutlet weak var colorPaletteToggle: UIButton!
     @IBOutlet weak var blackColorButton: UIButton!
     @IBOutlet weak var mediumBrushButton: UIButton!
-    
+
     var savedImage: UIImage?
-    
+
     var currentlySelectedColorButton: UIButton? {
         didSet {
             if let newButton = currentlySelectedColorButton {
                 newButton.layer.borderColor = UIColor.blueColor().CGColor
                 newButton.layer.borderWidth = 2.0
-                
+
                 if let oldButton = oldValue {
                     oldButton.layer.borderColor = nil
                     oldButton.layer.borderWidth = 0
@@ -38,13 +38,13 @@ class CanvasViewController: UIViewController {
             }
         }
     }
-    
+
     var currentlySelectedSizeButton: UIButton? {
         didSet {
             if let newButton = currentlySelectedSizeButton {
                 newButton.layer.borderColor = UIColor.blueColor().CGColor
                 newButton.layer.borderWidth = 2.0
-                
+
                 if let oldButton = oldValue {
                     oldButton.layer.borderColor = nil
                     oldButton.layer.borderWidth = 0
@@ -52,89 +52,89 @@ class CanvasViewController: UIViewController {
             }
         }
     }
-    
-    
-    //MARK: Life Cycle
+
+
+    // MARK: Life Cycle
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
+
         if let savedImage = imageFromDocuments() {
             canvasView.image = savedImage
         }
-        
+
         for color in colorPalette {
             color.hidden = true
         }
-        
+
         for brush in brushSizePalette {
             brush.hidden = true
         }
-        
+
         clearButton.hidden = true
         currentlySelectedColorButton = blackColorButton
         currentlySelectedSizeButton = mediumBrushButton
     }
-    
-    
-    //MARK: IBActions
+
+
+    // MARK: IBActions
     @IBAction func toggleColorPalette(sender: UIButton) {
         let isHidden = colorPalette.first?.hidden
         for color in colorPalette {
             color.hidden = !isHidden!
         }
     }
-    
+
     @IBAction func toggleBrushSizePalette(sender: UIButton) {
         let isHidden = brushSizePalette.first?.hidden
         for size in brushSizePalette {
             size.hidden = !isHidden!
         }
     }
-    
+
     @IBAction func toggleEraser(sender: UIButton) {
         let isSelected = sender.selected
         sender.selected = !isSelected
         canvasView.isErasing = sender.selected
         clearButton.hidden = !sender.selected
     }
-    
+
     @IBAction func setBrushColor(sender: UIButton) {
         let selectedColor = sender.backgroundColor!
-        
+
         if canvasView.isErasing {
             canvasView.pendingBrushColor = selectedColor
         } else {
-            canvasView.brush.color = selectedColor
+            canvasView.setBrushColor(selectedColor)
         }
-        
+
         colorPaletteToggle.setTitleColor(selectedColor, forState: .Normal)
         currentlySelectedColorButton = sender
     }
-    
+
     @IBAction func setBrushSize(sender: UIButton) {
         let size = (sender.titleLabel?.font.pointSize)!
-        canvasView.brush.size = size
+        canvasView.setBrushSize(size)
         currentlySelectedSizeButton = sender
     }
-    
+
     @IBAction func clearCanvas(sender: AnyObject) {
         canvasView.clear()
         toggleEraser(eraseButton)
     }
-    
+
     @IBAction func restoreImage(sender: UIButton) {
         canvasView.clear()
         if let image = savedImage {
             canvasView.image = image
         }
     }
-    
+
     @IBAction func sendToPhotos(sender: UIButton) {
         if let img = savedImage {
             UIImageWriteToSavedPhotosAlbum(img, self, #selector(CanvasViewController.image(_:didFinishSavingWithError:contextInfo:)), nil)
         }
     }
-    
+
     func image(image: UIImage, didFinishSavingWithError error: NSError?, contextInfo:UnsafePointer<Void>) {
         guard error == nil else {
             print(error)
@@ -142,15 +142,15 @@ class CanvasViewController: UIViewController {
         }
         displayImageSavedAlert()
     }
-    
+
     func displayImageSavedAlert() {
         let alert = UIAlertController(title: "Image saved to Photos", message: nil, preferredStyle: .Alert)
         let okAction = UIAlertAction.init(title: "OK", style: .Cancel, handler: nil)
         alert.addAction(okAction)
         presentViewController(alert, animated: true, completion: nil)
     }
-    
-    //MARK: Persistence
+
+    // MARK: Persistence
     func imageFromDocuments() -> UIImage? {
         if let imageData = FileManager.loadImageFromDocuments() {
             if let image = UIImage(data: imageData) {
@@ -165,7 +165,7 @@ class CanvasViewController: UIViewController {
 }
 
 
-//MARK: CanvasViewDelegate
+// MARK: CanvasViewDelegate
 extension CanvasViewController: CanvasViewDelegate {
     func canvasViewDidCompleteBrushStroke(view: CanvasView) {
         savedImage = nil
@@ -174,7 +174,7 @@ extension CanvasViewController: CanvasViewDelegate {
             print("Could not convert image to PNG")
             return
         }
-        
+
         FileManager.saveImageToDocuments(PNGImage)
     }
 }

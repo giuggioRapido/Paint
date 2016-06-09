@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-struct Brush {
+internal struct Brush {
     var color = UIColor.blackColor() {
         didSet {
             previousColor = oldValue

@@ -34,9 +34,16 @@ class CanvasView: UIImageView {
             }
         }
     }
-    
-    
-    //MARK: Touch Events
+
+    internal func setBrushColor(color: UIColor) {
+        brush.color = color
+    }
+
+    internal func setBrushSize(size: CGFloat) {
+        brush.size = size
+    }
+
+    // MARK: Touch Events
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         swiped = false
         if let touch = touches.first {
@@ -66,8 +73,8 @@ class CanvasView: UIImageView {
     override func touchesCancelled(touches: Set<UITouch>?, withEvent event: UIEvent?) {
     }
     
-    //MARK: Drawing
-    func drawLineFrom(fromPoint: CGPoint, toPoint: CGPoint) {
+    // MARK: Drawing
+    private func drawLineFrom(fromPoint: CGPoint, toPoint: CGPoint) {
         
         UIGraphicsBeginImageContext(self.bounds.size)
         let context = UIGraphicsGetCurrentContext()
