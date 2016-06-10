@@ -79,8 +79,9 @@ class CanvasView: UIImageView {
         UIGraphicsBeginImageContext(self.bounds.size)
         let context = UIGraphicsGetCurrentContext()
         
-        self.image?.drawInRect(CGRect(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.size.height))
-        
+//        self.image?.drawInRect(CGRect(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.size.height))
+        layer.renderInContext(context!)
+
         CGContextMoveToPoint(context, fromPoint.x, fromPoint.y)
         CGContextAddLineToPoint(context, toPoint.x, toPoint.y)
         
