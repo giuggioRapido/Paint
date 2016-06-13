@@ -51,7 +51,10 @@ class CanvasViewController: UIViewController {
     // MARK: Life Cycle
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        setUpDefaultUI()
+    }
 
+    func setUpDefaultUI() {
         if let savedImage = imageFromDocuments() {
             canvasView.image = savedImage
         }
@@ -65,8 +68,13 @@ class CanvasViewController: UIViewController {
         }
 
         clearButton.hidden = true
+
         currentlySelectedColorButton = blackColorButton
+        canvasView.setBrushColor(UIColor.blackColor())
+
         currentlySelectedSizeButton = mediumBrushButton
+        canvasView.setBrushSize(10.0)
+
     }
 
     // MARK: IBActions

@@ -18,4 +18,3 @@ internal struct Brush {
     var size: CGFloat = 20.0
     var previousColor = UIColor.blackColor()
 }
-
