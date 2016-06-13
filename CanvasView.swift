@@ -50,54 +50,54 @@ class CanvasView: UIImageView {
             lastPoint = touch.locationInView(self)
         }
     }
-    
+
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
         swiped = true
-        
+
         if let touch = touches.first {
             let currentPoint = touch.locationInView(self)
             drawLineFrom(lastPoint, toPoint: currentPoint)
             lastPoint = currentPoint
-            
+
         }
     }
-    
+
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         if !swiped {
             drawLineFrom(lastPoint, toPoint: lastPoint)
         }
-        
+
         delegate?.canvasViewDidCompleteBrushStroke(self)
     }
-    
+
     override func touchesCancelled(touches: Set<UITouch>?, withEvent event: UIEvent?) {
     }
-    
+
     // MARK: Drawing
     private func drawLineFrom(fromPoint: CGPoint, toPoint: CGPoint) {
-        
+
         UIGraphicsBeginImageContext(self.bounds.size)
         let context = UIGraphicsGetCurrentContext()
-        
-//        self.image?.drawInRect(CGRect(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.size.height))
+
+        //        self.image?.drawInRect(CGRect(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.size.height))
         layer.renderInContext(context!)
 
         CGContextMoveToPoint(context, fromPoint.x, fromPoint.y)
         CGContextAddLineToPoint(context, toPoint.x, toPoint.y)
-        
+
         CGContextSetLineCap(context, .Round)
         CGContextSetLineWidth(context, brush.size)
         CGContextSetStrokeColorWithColor(context, brush.color.CGColor)
         CGContextSetBlendMode(context, .Normal)
-        
+
         CGContextStrokePath(context)
-        
+
         self.image = UIGraphicsGetImageFromCurrentImageContext()
         self.alpha = 1.0
-        
+
         UIGraphicsEndImageContext()
     }
-    
+
     func clear() {
         self.image = nil
     }

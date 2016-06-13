@@ -28,13 +28,10 @@ class CanvasViewController: UIViewController {
     var currentlySelectedColorButton: UIButton? {
         didSet {
             if let newButton = currentlySelectedColorButton {
-                newButton.layer.borderColor = UIColor.blueColor().CGColor
-                newButton.layer.borderWidth = 2.0
-
-                if let oldButton = oldValue {
-                    oldButton.layer.borderColor = nil
-                    oldButton.layer.borderWidth = 0
-                }
+                highlightButton(newButton)
+            }
+            if let oldButton = oldValue {
+                unhighlightButton(oldButton)
             }
         }
     }
@@ -42,13 +39,10 @@ class CanvasViewController: UIViewController {
     var currentlySelectedSizeButton: UIButton? {
         didSet {
             if let newButton = currentlySelectedSizeButton {
-                newButton.layer.borderColor = UIColor.blueColor().CGColor
-                newButton.layer.borderWidth = 2.0
-
-                if let oldButton = oldValue {
-                    oldButton.layer.borderColor = nil
-                    oldButton.layer.borderWidth = 0
-                }
+                highlightButton(newButton)
+            }
+            if let oldButton = oldValue {
+                unhighlightButton(oldButton)
             }
         }
     }
@@ -74,7 +68,6 @@ class CanvasViewController: UIViewController {
         currentlySelectedColorButton = blackColorButton
         currentlySelectedSizeButton = mediumBrushButton
     }
-
 
     // MARK: IBActions
     @IBAction func toggleColorPalette(sender: UIButton) {
@@ -135,6 +128,18 @@ class CanvasViewController: UIViewController {
         }
     }
 
+    // MARK: UI Feedback
+    func highlightButton(button: UIButton) {
+        button.layer.borderColor = UIColor.blueColor().CGColor
+        button.layer.borderWidth = 2.0
+    }
+
+    func unhighlightButton(button: UIButton) {
+        button.layer.borderColor = nil
+        button.layer.borderWidth = 0
+    }
+
+    // MARK: Persistence
     func image(image: UIImage, didFinishSavingWithError error: NSError?, contextInfo:UnsafePointer<Void>) {
         guard error == nil else {
             print(error)
@@ -150,7 +155,6 @@ class CanvasViewController: UIViewController {
         presentViewController(alert, animated: true, completion: nil)
     }
 
-    // MARK: Persistence
     func imageFromDocuments() -> UIImage? {
         if let imageData = FileManager.loadImageFromDocuments() {
             if let image = UIImage(data: imageData) {
@@ -174,7 +178,7 @@ extension CanvasViewController: CanvasViewDelegate {
             print("Could not convert image to PNG")
             return
         }
-
+        
         FileManager.saveImageToDocuments(PNGImage)
     }
 }

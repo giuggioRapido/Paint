@@ -187,33 +187,26 @@
                                     <constraint firstItem="BCC-MG-7sh" firstAttribute="top" secondItem="tYR-Az-vpV" secondAttribute="top" id="7Eb-2P-TNu"/>
                                     <constraint firstItem="NMK-4T-Fwu" firstAttribute="centerX" secondItem="Pdp-E4-VVw" secondAttribute="centerX" id="7z1-fw-Rh4"/>
                                     <constraint firstItem="rx4-kC-J4M" firstAttribute="leading" secondItem="76h-Gy-ZPP" secondAttribute="leading" id="8yK-eT-CZS"/>
-                                    <constraint firstAttribute="trailing" secondItem="Pdp-E4-VVw" secondAttribute="trailing" constant="20" symbolic="YES" id="B2Z-BA-68Q"/>
                                     <constraint firstItem="lDV-YP-nGA" firstAttribute="top" secondItem="76h-Gy-ZPP" secondAttribute="bottom" constant="18" id="CrC-7n-xWN"/>
-                                    <constraint firstAttribute="bottom" secondItem="Pdp-E4-VVw" secondAttribute="bottom" constant="8" id="FMJ-G6-KGh"/>
                                     <constraint firstItem="fgt-9g-EMi" firstAttribute="height" secondItem="lDV-YP-nGA" secondAttribute="height" id="FYy-np-fh0"/>
                                     <constraint firstAttribute="trailing" secondItem="Pdp-E4-VVw" secondAttribute="trailing" constant="20" id="FbD-YB-MfJ"/>
                                     <constraint firstItem="gzp-wz-1Fq" firstAttribute="leading" secondItem="BCC-MG-7sh" secondAttribute="leading" id="Fgp-HC-fT5"/>
                                     <constraint firstItem="tYR-Az-vpV" firstAttribute="top" secondItem="BZQ-p4-iDD" secondAttribute="bottom" constant="8" symbolic="YES" id="GNk-t9-KNS"/>
                                     <constraint firstItem="1iQ-66-wNt" firstAttribute="top" secondItem="Pdp-E4-VVw" secondAttribute="top" id="I0o-qF-1Rw"/>
-                                    <constraint firstItem="NMK-4T-Fwu" firstAttribute="centerX" secondItem="Pdp-E4-VVw" secondAttribute="centerX" id="IEP-x3-xQ1"/>
                                     <constraint firstItem="76h-Gy-ZPP" firstAttribute="centerX" secondItem="lDV-YP-nGA" secondAttribute="centerX" id="Izv-jC-iS1"/>
                                     <constraint firstItem="gzp-wz-1Fq" firstAttribute="top" secondItem="BZQ-p4-iDD" secondAttribute="top" id="KD7-xz-rhg"/>
                                     <constraint firstItem="fgt-9g-EMi" firstAttribute="width" secondItem="lDV-YP-nGA" secondAttribute="width" id="KYa-Bx-8ug"/>
                                     <constraint firstItem="rx4-kC-J4M" firstAttribute="top" secondItem="tYR-Az-vpV" secondAttribute="bottom" constant="8" symbolic="YES" id="Kl1-Xg-S7Z"/>
-                                    <constraint firstAttribute="bottom" secondItem="76h-Gy-ZPP" secondAttribute="bottom" constant="65" id="LFw-0k-Hlv"/>
                                     <constraint firstAttribute="bottom" secondItem="lDV-YP-nGA" secondAttribute="bottom" constant="8" id="MfG-Es-4Tx"/>
                                     <constraint firstItem="5o7-5D-IHe" firstAttribute="firstBaseline" secondItem="1iQ-66-wNt" secondAttribute="baseline" id="NfX-BG-sZi"/>
                                     <constraint firstItem="fgt-9g-EMi" firstAttribute="baseline" secondItem="lDV-YP-nGA" secondAttribute="baseline" id="ROr-zU-peg"/>
-                                    <constraint firstItem="BZQ-p4-iDD" firstAttribute="leading" secondItem="M0y-yz-lLn" secondAttribute="leading" constant="32" id="TXg-mx-qum"/>
                                     <constraint firstItem="eEW-Tn-Ak2" firstAttribute="top" secondItem="76h-Gy-ZPP" secondAttribute="top" id="UFa-Jk-olh"/>
-                                    <constraint firstItem="Pdp-E4-VVw" firstAttribute="baseline" secondItem="fgt-9g-EMi" secondAttribute="baseline" id="XiZ-0V-Ihe"/>
                                     <constraint firstItem="NMK-4T-Fwu" firstAttribute="top" secondItem="eEW-Tn-Ak2" secondAttribute="top" id="bbJ-Eh-Mwy"/>
                                     <constraint firstItem="76h-Gy-ZPP" firstAttribute="top" secondItem="rx4-kC-J4M" secondAttribute="bottom" constant="8" symbolic="YES" id="c4M-gU-q7x"/>
                                     <constraint firstItem="YeF-2m-tVJ" firstAttribute="leading" secondItem="eEW-Tn-Ak2" secondAttribute="leading" id="diO-m9-CMZ"/>
                                     <constraint firstItem="YeF-2m-tVJ" firstAttribute="top" secondItem="rx4-kC-J4M" secondAttribute="top" id="iMc-Gx-SRE"/>
                                     <constraint firstItem="1iQ-66-wNt" firstAttribute="baseline" secondItem="Pdp-E4-VVw" secondAttribute="firstBaseline" id="izz-B2-aFc"/>
                                     <constraint firstItem="Pdp-E4-VVw" firstAttribute="leading" secondItem="1iQ-66-wNt" secondAttribute="trailing" constant="20" id="pW8-zk-0Ed"/>
-                                    <constraint firstItem="Pdp-E4-VVw" firstAttribute="leading" secondItem="1iQ-66-wNt" secondAttribute="trailing" constant="19" id="pZ3-4w-wqG"/>
                                     <constraint firstAttribute="bottom" secondItem="Pdp-E4-VVw" secondAttribute="bottom" constant="8" id="rUa-8h-Fjy"/>
                                     <constraint firstItem="BCC-MG-7sh" firstAttribute="leading" secondItem="YeF-2m-tVJ" secondAttribute="leading" id="tdg-cF-Iae"/>
                                     <constraint firstItem="1iQ-66-wNt" firstAttribute="leading" secondItem="5o7-5D-IHe" secondAttribute="trailing" constant="16" id="uOi-i2-XYA"/>
@@ -225,17 +218,6 @@
                                     <constraint firstItem="YeF-2m-tVJ" firstAttribute="top" secondItem="BCC-MG-7sh" secondAttribute="bottom" constant="8" symbolic="YES" id="zbt-aC-di1"/>
                                     <constraint firstItem="lDV-YP-nGA" firstAttribute="leading" secondItem="M0y-yz-lLn" secondAttribute="leading" constant="20" id="zdn-fQ-pIX"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="TXg-mx-qum"/>
-                                        <exclude reference="LFw-0k-Hlv"/>
-                                        <exclude reference="IEP-x3-xQ1"/>
-                                        <exclude reference="B2Z-BA-68Q"/>
-                                        <exclude reference="FMJ-G6-KGh"/>
-                                        <exclude reference="XiZ-0V-Ihe"/>
-                                        <exclude reference="pZ3-4w-wqG"/>
-                                    </mask>
-                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
