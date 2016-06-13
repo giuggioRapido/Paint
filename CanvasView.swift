@@ -46,6 +46,7 @@ class CanvasView: UIImageView {
     // MARK: Touch Events
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         swiped = false
+
         if let touch = touches.first {
             lastPoint = touch.locationInView(self)
         }
