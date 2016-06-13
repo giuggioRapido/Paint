@@ -80,22 +80,21 @@ class CanvasView: UIImageView {
         UIGraphicsBeginImageContext(self.bounds.size)
         let context = UIGraphicsGetCurrentContext()
 
-        //        self.image?.drawInRect(CGRect(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.size.height))
         layer.renderInContext(context!)
 
-        CGContextMoveToPoint(context, fromPoint.x, fromPoint.y)
-        CGContextAddLineToPoint(context, toPoint.x, toPoint.y)
+        let path = UIBezierPath()
+        path.lineCapStyle = .Round
+        path.lineWidth = brush.size
+        brush.color.setStroke()
 
-        CGContextSetLineCap(context, .Round)
-        CGContextSetLineWidth(context, brush.size)
-        CGContextSetStrokeColorWithColor(context, brush.color.CGColor)
-        CGContextSetBlendMode(context, .Normal)
+        path.moveToPoint(CGPointMake(fromPoint.x, fromPoint.y))
+        path.addLineToPoint(CGPointMake(toPoint.x, toPoint.y))
 
-        CGContextStrokePath(context)
-
+        path.stroke()
+        
         self.image = UIGraphicsGetImageFromCurrentImageContext()
         self.alpha = 1.0
-
+        
         UIGraphicsEndImageContext()
     }
 
