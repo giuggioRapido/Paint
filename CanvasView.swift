@@ -8,16 +8,26 @@
 
 import UIKit
 
-protocol CanvasViewDelegate {
+protocol CanvasViewDelegate: class {
     func canvasViewDidCompleteBrushStroke(view: CanvasView)
 }
 
-class CanvasView: UIImageView {
-    var brush = Brush()
+final class CanvasView: UIImageView {
+    private var brush = Brush()
+
+    var brushColor: UIColor {
+        get { return brush.color }
+        set { brush.color = newValue }
+    }
+    var brushSize: CGFloat {
+        get { return brush.size }
+        set { brush.size = newValue }
+    }
+
     var pendingBrushColor: UIColor?
-    var swiped = false
-    var lastPoint = CGPoint.zero
-    var delegate: CanvasViewDelegate?
+    private  var swiped = false
+    private var lastPoint = CGPoint.zero
+    weak var delegate: CanvasViewDelegate?
 
     var isErasing = false {
         willSet {
@@ -33,14 +43,6 @@ class CanvasView: UIImageView {
                 }
             }
         }
-    }
-
-    internal func setBrushColor(color: UIColor) {
-        brush.color = color
-    }
-
-    internal func setBrushSize(size: CGFloat) {
-        brush.size = size
     }
 
     // MARK: Touch Events
@@ -91,13 +93,13 @@ class CanvasView: UIImageView {
         path.addLineToPoint(CGPointMake(toPoint.x, toPoint.y))
 
         path.stroke()
-        
+
         self.image = UIGraphicsGetImageFromCurrentImageContext()
         self.alpha = 1.0
         
         UIGraphicsEndImageContext()
     }
-
+    
     func clear() {
         self.image = nil
     }

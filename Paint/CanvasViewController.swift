@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CanvasViewController: UIViewController {
+final class CanvasViewController: UIViewController {
 
     @IBOutlet weak var canvasView: CanvasView! {
         didSet {
@@ -23,9 +23,20 @@ class CanvasViewController: UIViewController {
     @IBOutlet weak var blackColorButton: UIButton!
     @IBOutlet weak var mediumBrushButton: UIButton!
 
-    var savedImage: UIImage?
+    private var savedImage: UIImage?
+    private var imageFromDocuments: UIImage? {
+        if let imageData = FileManager.loadImageFromDocuments() {
+            if let image = UIImage(data: imageData) {
+                return image
+            } else {
+                return nil
+            }
+        } else {
+            return nil
+        }
+    }
 
-    var currentlySelectedColorButton: UIButton? {
+   private var currentlySelectedColorButton: UIButton? {
         didSet {
             if let newButton = currentlySelectedColorButton {
                 highlightButton(newButton)
@@ -36,7 +47,7 @@ class CanvasViewController: UIViewController {
         }
     }
 
-    var currentlySelectedSizeButton: UIButton? {
+    private var currentlySelectedSizeButton: UIButton? {
         didSet {
             if let newButton = currentlySelectedSizeButton {
                 highlightButton(newButton)
@@ -54,8 +65,9 @@ class CanvasViewController: UIViewController {
         setUpDefaultUI()
     }
 
-    func setUpDefaultUI() {
-        if let savedImage = imageFromDocuments() {
+    // MARK: Setup
+    private func setUpDefaultUI() {
+        if let savedImage = imageFromDocuments {
             canvasView.image = savedImage
         }
 
@@ -70,10 +82,10 @@ class CanvasViewController: UIViewController {
         clearButton.hidden = true
 
         currentlySelectedColorButton = blackColorButton
-        canvasView.setBrushColor(UIColor.blackColor())
+        canvasView.brushColor = UIColor.blackColor()
 
         currentlySelectedSizeButton = mediumBrushButton
-        canvasView.setBrushSize(10.0)
+        canvasView.brushSize = 10.0
 
     }
 
@@ -105,7 +117,7 @@ class CanvasViewController: UIViewController {
         if canvasView.isErasing {
             canvasView.pendingBrushColor = selectedColor
         } else {
-            canvasView.setBrushColor(selectedColor)
+            canvasView.brushColor = selectedColor
         }
 
         colorPaletteToggle.setTitleColor(selectedColor, forState: .Normal)
@@ -114,7 +126,7 @@ class CanvasViewController: UIViewController {
 
     @IBAction func setBrushSize(sender: UIButton) {
         let size = (sender.titleLabel?.font.pointSize)!
-        canvasView.setBrushSize(size)
+        canvasView.brushSize = size
         currentlySelectedSizeButton = sender
     }
 
@@ -137,18 +149,18 @@ class CanvasViewController: UIViewController {
     }
 
     // MARK: UI Feedback
-    func highlightButton(button: UIButton) {
+    private func highlightButton(button: UIButton) {
         button.layer.borderColor = UIColor.blueColor().CGColor
         button.layer.borderWidth = 2.0
     }
 
-    func unhighlightButton(button: UIButton) {
+    private func unhighlightButton(button: UIButton) {
         button.layer.borderColor = nil
         button.layer.borderWidth = 0
     }
 
     // MARK: Persistence
-    func image(image: UIImage, didFinishSavingWithError error: NSError?, contextInfo:UnsafePointer<Void>) {
+    @objc private func image(image: UIImage, didFinishSavingWithError error: NSError?, contextInfo:UnsafePointer<Void>) {
         guard error == nil else {
             print(error)
             return
@@ -156,23 +168,11 @@ class CanvasViewController: UIViewController {
         displayImageSavedAlert()
     }
 
-    func displayImageSavedAlert() {
+    private func displayImageSavedAlert() {
         let alert = UIAlertController(title: "Image saved to Photos", message: nil, preferredStyle: .Alert)
         let okAction = UIAlertAction.init(title: "OK", style: .Cancel, handler: nil)
         alert.addAction(okAction)
         presentViewController(alert, animated: true, completion: nil)
-    }
-
-    func imageFromDocuments() -> UIImage? {
-        if let imageData = FileManager.loadImageFromDocuments() {
-            if let image = UIImage(data: imageData) {
-                return image
-            } else {
-                return nil
-            }
-        } else {
-            return nil
-        }
     }
 }
 

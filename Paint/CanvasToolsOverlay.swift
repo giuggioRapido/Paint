@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CanvasToolsOverlay: UIView {
+final class CanvasToolsOverlay: UIView {
 
     // Allows touches to "pass through" overlay to view behind it, except for overlay buttons.
     override func pointInside(point: CGPoint, withEvent event: UIEvent?) -> Bool {
